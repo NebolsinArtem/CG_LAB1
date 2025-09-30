@@ -173,11 +173,11 @@ for k in range(13):
     #draw_line_fix1(img_mat, x0, y0, x1, y1, [128, 0, 128])
     #x_loop_line(img_mat, x0, y0, x1, y1, [128, 0, 128])
     #x_loop_line_fix1(img_mat, x0, y0, x1, y1, [128, 0, 128])
-    x_loop_line_fix2(img_mat, x0, y0, x1, y1, [128, 0, 128])
+    #x_loop_line_fix2(img_mat, x0, y0, x1, y1, [128, 0, 128])
     #x_loop_line_fixes(img_mat, x0, y0, x1, y1, [128, 0, 128])
     #x_loop_line_no_y_calc(img_mat, x0, y0, x1, y1, [128, 0, 128])
     #x_loop_line_v2_no_y_calc(img_mat, x0, y0, x1, y1, [128, 0, 128])
-    #bresenham_line(img_mat, x0, y0, x1, y1, [128, 0, 128])
+    bresenham_line(img_mat, x0, y0, x1, y1, [128, 0, 128])
 
     
 
@@ -200,4 +200,5 @@ for k in range(13):
 
 img = Image.fromarray(img_mat, mode = 'RGB')
 img.show()
+
 img.save('img.png')
