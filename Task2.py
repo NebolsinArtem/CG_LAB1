@@ -61,10 +61,10 @@ img_mat = np.zeros((2000,2000,3), dtype=np.uint8)
 arrdots = parsedotsobj("C:\model_1.obj")
 arrindexes = parsepolysobj("C:\model_1.obj")
 
-#for cords in arrdots:
-#    x = int(float(cords[0])*5000 + 1000)
-#    y = int(float(cords[1])*5000 + 1000)
-#    img_mat[y, x] = 255
+for cords in arrdots:
+    x = int(float(cords[0])*5000 + 1000)
+    y = int(float(cords[1])*5000 + 1000)
+    img_mat[y, x] = 255
 
 
 for indexes in arrindexes:
@@ -78,8 +78,7 @@ for indexes in arrindexes:
     bresenham_line(img_mat, x0, y0, x2, y2, 255)
     bresenham_line(img_mat, x2, y2, x1, y1, 255)
 
-#print(arrindexes)
-
 img = Image.fromarray(img_mat, mode = 'RGB')
 img.show()
+
 img.save('img.png')
